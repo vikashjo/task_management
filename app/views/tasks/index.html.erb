@@ -1,31 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Your Tasks</h1>
-<%= link_to 'New Task', new_task_path %>
+<div class="card">
+  <div class="card-body">
+    <h3 class='card-title d-flex justify-content-between mb-4'>
+      <span>Your Tasks</span>
+      <%= link_to 'New Task', new_task_path, class: 'btn btn-primary' %>
+    </h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Status</th>
-      <th>Deadline</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
     <% @tasks.each do |task| %>
-      <tr>
-        <td><%= task.title %></td>
-        <td><%= task.description %></td>
-        <td><%= task.status %></td>
-        <td><%= task.deadline %></td>
-        <td>
-          <%= link_to 'Show', task %>
-          <%= link_to 'Edit', edit_task_path(task) %>
-          <%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
+      <%= link_to task do %>
+        <div class="card">
+          <div class="card-body">
+          <span class="badge bg-<%= task.badge_color %> mb-4"><%= task.status %></span>
+            <h5 class='card-title d-flex justify-content-between mb-4'> <%= task.title %> </h5>
+            <p> <%= task.description %> </p>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  </tbody>
-</table>
+  </div>
+</div>
+
+
+

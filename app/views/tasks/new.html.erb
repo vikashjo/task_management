@@ -1,9 +1,18 @@
-<h1>New task</h1>
+<div class="container">
+  <div class="row">
+    <div class="card">
+      <div class="card-body">
+        <div class="mb-4"><h3>New task</h3>
 
-<%= render "form", task: @task %>
+          <%= render "form", task: @task %>
 
-<br>
+          <br>
 
-<div>
-  <%= link_to "Back to tasks", tasks_path %>
+          <div>
+            <%= link_to "Back to tasks", tasks_path %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
