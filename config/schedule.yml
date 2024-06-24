@@ -1,0 +1,7 @@
+task_reminder:
+  cron: "*/2 * * * *"   # Every day at midnight
+  class: "TaskReminderJob"
+  queue: default
+task_reminder_hourly:
+  cron: "0 * * * *"   # Every hour
+  class: "TaskReminderJob"

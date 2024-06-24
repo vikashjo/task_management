@@ -10,9 +10,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %> </p>
-    <p class="alert"><%= alert %> </p>
+  <body class='bg-light'>
+  <div class="container pt-5 pb-5">
+  <span><h1>Task Management App</h1></span>
+    <p class="notice" style="color: green"><%= notice %> </p>
+    <p class="alert" ><%= alert %> </p>
     <%= yield %>
+  </div>
   </body>
 </html>

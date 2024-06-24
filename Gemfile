@@ -2,6 +2,12 @@ source "https://rubygems.org"
 
 ruby "3.1.5"
 gem 'devise'
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
+gem 'bootstrap', '~> 5.3.3'
+gem 'sassc-rails'
+gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.3"
 
@@ -60,6 +66,7 @@ group :development do
   # gem "spring"
 
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
+  gem "letter_opener"
 end
 
 group :test do
